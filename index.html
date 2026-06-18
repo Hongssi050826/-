@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>냥생 메이트</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h1>🐱 냥마고치</h1>
+
+<!-- 집사 정보 -->
+
+<div class="card">
+
+<h2>👤 집사 정보</h2>
+
+<input
+id="ownerName"
+placeholder="집사 이름">
+
+<input
+id="catName"
+placeholder="고양이 이름">
+
+<select id="relationship">
+
+<option value="solo">솔로</option>
+<option value="dating">연애중</option>
+<option value="married">결혼</option>
+
+</select>
+
+<button onclick="saveProfile()">
+저장
+</button>
+
+</div>
+
+<!-- 고양이 -->
+
+<div class="card">
+
+<h2>🐾 내 고양이</h2>
+
+<select id="catSelect" onchange="changeCat()">
+
+<option value="🐱">코숏</option>
+<option value="🐈">치즈냥</option>
+<option value="⚫">검은고양이</option>
+<option value="🤍">흰고양이</option>
+<option value="🐯">호랑이무늬</option>
+
+</select>
+
+<div id="cat">
+🐱
+</div>
+
+<div id="accessory"></div>
+
+<h3 id="catTitle">
+아기 고양이
+</h3>
+
+</div>
+
+<!-- 상태 -->
+
+<div class="card">
+
+<h2>📊 상태</h2>
+
+<p>
+💰 포인트 :
+<span id="points">0</span>
+</p>
+
+<p>
+❤️ 친밀도 :
+<span id="friendship">0</span>
+</p>
+
+</div>
+
+<!-- 공부 -->
+
+<div class="card">
+
+<h2>📚 공부 타이머</h2>
+
+<div id="studyTimer">
+00:00:00
+</div>
+
+<button onclick="startStudy()">
+공부 시작
+</button>
+
+<button onclick="stopStudy()">
+공부 종료
+</button>
+
+</div>
+
+<!-- 알바 -->
+
+<div class="card">
+
+<h2>💼 알바 타이머</h2>
+
+<div id="workTimer">
+00:00:00
+</div>
+
+<button onclick="startWork()">
+알바 시작
+</button>
+
+<button onclick="stopWork()">
+알바 종료
+</button>
+
+</div>
+
+<!-- 일정 -->
+
+<div class="card">
+
+<h2>📅 일정 관리</h2>
+
+<input
+id="taskName"
+placeholder="일정 이름">
+
+<input
+id="taskReward"
+type="number"
+placeholder="보상 포인트">
+
+<button onclick="addTask()">
+추가
+</button>
+
+<div id="taskList"></div>
+
+</div>
+
+<!-- 상점 -->
+
+<div class="card">
+
+<h2>🛍️ 상점</h2>
+
+<button onclick="buyRibbon()">
+🎀 리본 (100P)
+</button>
+
+<button onclick="buyGlasses()">
+👓 안경 (150P)
+</button>
+
+<button onclick="buyCrown()">
+👑 왕관 (300P)
+</button>
+
+</div>
+
+<!-- 랜덤 이벤트 -->
+
+<div class="card">
+
+<h2>📖 오늘의 이야기</h2>
+
+<button onclick="randomStory()">
+이벤트 보기
+</button>
+
+<p id="storyText">
+오늘은 어떤 일이 일어날까?
+</p>
+
+</div>
+
+<!-- 채팅 -->
+
+<div class="card">
+
+<h2>💬 AI 고양이 채팅</h2>
+
+<input
+id="userInput"
+placeholder="고양이에게 말하기">
+
+<button onclick="chatAI()">
+AI에게 말하기
+</button>
+
+<p id="message">
+안녕 집사!
+</p>
+
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
